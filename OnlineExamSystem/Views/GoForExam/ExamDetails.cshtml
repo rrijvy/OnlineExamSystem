@@ -1,0 +1,66 @@
+﻿@model ExamPaper
+@{
+    ViewData["Title"] = "ExamDetails";
+}
+
+<div class="start_exam">
+    <h1>@Model.ExamTitle</h1>
+    <h2>@Model.SubjectName || @Model.SubjectCode</h2>
+    <h3>@Model.Instruction</h3>
+    @*<a href="/GoForExam/Questions/@Model.Id">Start Exam</a>*@
+    @*<form asp-action="Questions" asp-controller="GoForExam" method="post">
+          <button asp-route-id="@Model.Id">Start Exam</button>
+        </form>*@
+    <button id="showQuestions">Start Exam</button>
+</div>
+<div id="popup_bg">
+    <div id="popup_main_div">
+        <div id="popup_close_div">
+            <p>X</p>
+        </div>
+        <div id="main_data">
+
+        </div>
+        <div id="popup_footer">
+
+        </div>
+    </div>
+</div>
+
+@section scripts{ 
+    <script>
+        $(document).ready(function () {
+            $('#showQuestions').on('click', function () {
+                $('#popup_bg').css("display", "block");
+                $('#popup_main_div').css("display", "block");
+                $('#popup_close_div').on('click', function () {
+                    $('#popup_bg').css("display", "none");
+                });
+                var s = "";
+                var link = "/GoForExam/Questions/@Model.Id";
+                var value = @Model.Id;
+                var item = 0;
+                $.ajax({
+                    type: "GET",
+                    url: link,
+                    cache: false,
+                    dataType: "JSON",
+                    contentType: "application/x-www-form-urlencoded",
+                    success: function (data) {
+                        $('#main_data').html(" ");
+                        console.log(data);
+                        s += '<div class="question">';
+                        s += '<div>Question: ' + data[item].questionName + '</div>';
+                        s += '<div><span>A. ' + data[item].optionA + '</span><span>B.' + data[item].optionB + '</span></div>';
+                        s += '<div><span>C. ' + data[item].optionC + '</span><span>D.' + data[item].optionD + '</span></div>';
+                        s += '</div >';
+                        $('#main_data').append(s);
+                    }
+                    
+                });
+
+            });
+        });
+    </script>
+}
+

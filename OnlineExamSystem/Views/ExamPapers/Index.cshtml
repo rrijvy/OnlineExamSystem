@@ -1,0 +1,75 @@
+﻿@model IEnumerable<OnlineExamSystem.Models.ExamPaper>
+
+@{
+    ViewData["Title"] = "Exam Paper";
+}
+
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+
+<div class="col-md-12">
+    <div style="text-align:center">
+        <h4>You can give below exams.</h4>
+        <h4>At a time you can attend only one exam.</h4>
+    </div>
+    <br />
+    <br />
+    <table class="exam_details_table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ExamTitle)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubjectName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SubjectCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TotalMarks)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Instruction)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ExamTitle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubjectName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SubjectCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TotalMarks)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Instruction)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        @*<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
+                        <a asp-action="ExamDetails" asp-controller="GoForExam" asp-route-id="@item.Id">Go for exam</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

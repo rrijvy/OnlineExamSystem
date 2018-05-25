@@ -1,0 +1,12 @@
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\bin\Debug\netcoreapp2.0\OnlineExamSystem.deps.json
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\bin\Debug\netcoreapp2.0\OnlineExamSystem.runtimeconfig.json
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\bin\Debug\netcoreapp2.0\OnlineExamSystem.runtimeconfig.dev.json
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\bin\Debug\netcoreapp2.0\OnlineExamSystem.dll
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\bin\Debug\netcoreapp2.0\OnlineExamSystem.pdb
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\obj\Debug\netcoreapp2.0\OnlineExamSystem.csprojAssemblyReference.cache
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\obj\Debug\netcoreapp2.0\OnlineExamSystem.csproj.CoreCompileInputs.cache
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\obj\Debug\netcoreapp2.0\OnlineExamSystem.AssemblyInfoInputs.cache
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\obj\Debug\netcoreapp2.0\OnlineExamSystem.AssemblyInfo.cs
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\obj\Debug\netcoreapp2.0\OnlineExamSystem.dll
+c:\users\rrijv\source\repos\OnlineExamSystem\OnlineExamSystem\obj\Debug\netcoreapp2.0\OnlineExamSystem.pdb
